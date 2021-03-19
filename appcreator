@@ -1,0 +1,39 @@
+#!/bin/bash
+
+echo "App Creator ! \n"
+
+echo "File Path : "
+
+read file
+
+echo "Executing Code(if thats shell file you can enter empty value) : "
+
+read code
+
+echo "New App Name : "
+
+read app
+
+echo "Category : "
+
+read categ
+
+echo "Comment : "
+
+read com
+
+echo "Icon : "
+
+read icon
+
+cd /usr/share/applications
+
+echo "[Desktop Entry]
+Version=1.0
+Name= ${app}
+GenericName= ${categ}
+Comment= ${com}
+Exec= ${code} ${file}
+Icon= ${icon}
+Type=Application
+" >> "${app}.desktop"

@@ -1,0 +1,19 @@
+#!/bin/bash
+
+echo "Background Mover !"
+
+echo "Enter the input image : "
+
+read input
+
+echo "Enter the output name : "
+
+read output
+
+echo "Enter the moving background colour : "
+
+read colour 
+
+convert $input -fuzz 20%% -transparent $colour $output 
+
+
